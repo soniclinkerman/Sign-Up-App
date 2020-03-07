@@ -72,7 +72,15 @@ app.post("/login", function(req, res){
     
 })
 
+app.listen(process.env.PORT);
 
-app.listen(3004, function(){
-    console.log("On Port 3004")
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3004;
+}
+app.listen(port);
+
+
+app.listen(port, function(){
+    console.log("Server has started")
 })
