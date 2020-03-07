@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 
 
 app.get("/", function(req, res){
-    res.render("index");
+    res.render("home");
 })
 
 app.get("/login", function(req, res){
