@@ -72,14 +72,10 @@ app.post("/login", function(req, res){
     
 })
 
-app.listen(process.env.PORT);
-
 let port = process.env.PORT;
 if (port == null || port == "") {
   port = 3004;
 }
-app.listen(port);
-
 
 app.listen(port, function(){
     console.log("Server has started")
